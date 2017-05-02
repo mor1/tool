@@ -7,7 +7,7 @@ DEPS=$(wildcard cmd/moby/*.go) Makefile
 PREFIX?=/usr/local
 
 moby: $(DEPS)
-	go build --ldflags "-X main.GitCommit=$(GIT_COMMIT) -X main.Version=$(VERSION)" -o $@ github.com/moby/tool/cmd/moby
+	go build --ldflags "-X main.GitCommit=$(GIT_COMMIT) -X main.Version=$(VERSION)" -o $@ github.com/mor1/tool/cmd/moby
 
 PHONY: install
 install: moby

@@ -120,7 +120,7 @@ func buildInternal(name string, pull bool, config []byte) {
 	log.Infof("Extract kernel image: %s", m.Kernel.Image)
 	const (
 		kernelName    = "kernel"
-		kernelAltName = "bzImage"
+		kernelAltName = "Image"
 		ktarName      = "kernel.tar"
 	)
 	out, err := ImageExtract(m.Kernel.Image, "", enforceContentTrust(m.Kernel.Image, &m.Trust), pull)
